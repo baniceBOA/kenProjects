@@ -1,0 +1,41 @@
+MDScreen:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: "Top App Bar"
+            left_action_items: [["menu", lambda x: None]]
+        MDBoxLayout:
+            orientation: 'vertical'
+            MDTextField:
+                id:launch_velocity
+                hint_text: "Launch Velocity"
+                on_text: app.calculate_output()
+            MDTextField:
+                id:launch_angle
+                hint_text: "Launch Angle"
+                on_text: app.calculate_output()
+            #output:
+            MDSeparator:
+                height: "2dp"
+            MDLabel:
+                text: "Output"
+                size_hint_y: None
+                height: self.texture_size[1]
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDLabel:
+                    id:output_maximum_height
+                    text: "Maximum Height: "
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                MDLabel:
+                    id:output_time_taken
+                    text: "Time Taken: "
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                MDLabel:
+                    id:output_horizontal_distance
+                    text: "Horizontal Distance: "
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                Widget:
