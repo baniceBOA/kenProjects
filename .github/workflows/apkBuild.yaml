@@ -15,10 +15,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Manually install the missing legacy library for Ubuntu 24.04 compatibility
+      - name: Install legacy libtinfo5
+        run: |
+          sudo apt update
+          wget http://security.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2ubuntu0.1_amd64.deb
+          sudo apt install ./libtinfo5_6.3-2ubuntu0.1_amd64.deb
+
       - name: Build with Buildozer
         uses: digreatbrian/buildozer-action@v2
         with:
-          # This handles all the apt-get installs and SDK/NDK setup for you
           buildozer_cmd: buildozer android debug
           python_version: '3.11'
 
@@ -27,3 +33,5 @@ jobs:
         with:
           name: Projectile-Motion-APK
           path: bin/*.apk
+
+    
