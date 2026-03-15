@@ -21,6 +21,13 @@ jobs:
           sudo apt update
           wget http://security.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2ubuntu0.1_amd64.deb
           sudo apt install ./libtinfo5_6.3-2ubuntu0.1_amd64.deb
+      - name: Install System Dependencies
+        run: |
+          sudo apt update
+          sudo apt-get install -y libtool pkg-config autoconf automake
+          # Fix for legacy libtinfo required by older NDKs
+          wget http://security.ubuntu.com
+          sudo apt install ./libtinfo5_6.4-2_amd64.deb
 
       - name: Build with Buildozer
         uses: digreatbrian/buildozer-action@v2
