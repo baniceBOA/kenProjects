@@ -1,5 +1,5 @@
-# Sample repository at https://github.com/Novfensec/SAMPLE-KIVYMD-APP
-# Tic Tac Toe Game at https://github.com/Novfensec/Tic-Tac-Toe-Android
+# This workflow builds an Android APK using Buildozer on push and pull request events to the main branch.
+# https://github.com/baniceBOA/kenProjects
 
 name: Android Build
 
