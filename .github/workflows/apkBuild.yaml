@@ -24,7 +24,7 @@ jobs:
       - name: Install System Dependencies
         run: |
           sudo apt update
-          sudo apt-get install -y libtool pkg-config autoconf automakes
+          sudo apt-get install -y libtool pkg-config autoconf automake
 
       - name: Build with Buildozer
         uses: digreatbrian/buildozer-action@v2
