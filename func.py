@@ -14,7 +14,7 @@ def main():
     
     max_height = maximum_height(launch_velocity, launch_angle)
     horiz_distance = horizontal_distance(launch_velocity, launch_angle)
-    time_of_flight = flight_time(launch_velocity, launch_angle) * 2  # Total time of flight is double the time to reach max height
+    time_of_flight = flight_time(launch_velocity, launch_angle)   # Total time of flight is double the time to reach max height
     
     print(f"Maximum Height: {max_height:.2f} meters")
     print(f"Horizontal Distance: {horiz_distance:.2f} meters")

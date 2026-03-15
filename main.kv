@@ -2,23 +2,50 @@ MDScreen:
     MDBoxLayout:
         orientation: 'vertical'
         MDTopAppBar:
-            title: "Top App Bar"
-            left_action_items: [["menu", lambda x: None]]
+            title: "Projectile Motion Calculator"
         MDBoxLayout:
             orientation: 'vertical'
+            padding: ('14dp', '14dp', '14dp', '14dp')
+            MDLabel:
+                text: "Assumptions"
+                color:'red'
+                font_size:dp(28)
+                size_hint_y: None
+                height: self.texture_size[1]
+            MDLabel:
+                text: "No air resistance is experienced by the projectile"
+                color:'red'
+                font_size:dp(12)
+                size_hint_y: None
+                height: self.texture_size[1]
+            MDLabel:
+                text: "Acceleration due to gravity is 9.8m/s^2"
+                color:'red'
+                font_size:dp(12)
+                size_hint_y: None
+                height: self.texture_size[1]
+            MDLabel:
+                text: "The launch angle is provided in degrees"
+                color:'red'
+                font_size:dp(12)
+                size_hint_y: None
+                height: self.texture_size[1]
             MDTextField:
                 id:launch_velocity
-                hint_text: "Launch Velocity"
+                hint_text: "Launch Velocity in m/s"
                 on_text: app.calculate_output()
             MDTextField:
                 id:launch_angle
-                hint_text: "Launch Angle"
+                hint_text: "Launch Angle in Degress"
                 on_text: app.calculate_output()
             #output:
             MDSeparator:
-                height: "2dp"
+                height: "12dp"
+                color: 0 , 0.8 , 0 , 1
             MDLabel:
                 text: "Output"
+                font_size:dp(28)
+                color:'green'
                 size_hint_y: None
                 height: self.texture_size[1]
             MDBoxLayout:
