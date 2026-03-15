@@ -24,10 +24,7 @@ jobs:
       - name: Install System Dependencies
         run: |
           sudo apt update
-          sudo apt-get install -y libtool pkg-config autoconf automake
-          # Fix for legacy libtinfo required by older NDKs
-          wget http://security.ubuntu.com
-          sudo apt install ./libtinfo5_6.4-2_amd64.deb
+          sudo apt-get install -y libtool pkg-config autoconf automakes
 
       - name: Build with Buildozer
         uses: digreatbrian/buildozer-action@v2
