@@ -1,6 +1,6 @@
 
 
-Projectile Motion Calculator
+### Projectile Motion Calculator
 An Android  built with Python, Kivy, and Kivymd that calculates the physical properties of a projectile's motion  based on user input.
 1. About the Project
 This application provides a simple interface to calculate three key metrics of projectile motion:
@@ -9,7 +9,7 @@ This application provides a simple interface to calculate three key metrics of p
 * Horizontal Distance (Range): The total horizontal distance traveled before hitting the ground.
 * The time taken to reach the maximum height.
 
-How it Works
+ # How it Works
 The app uses standard kinematic equations to process user input (Launch Velocity and Launch Angle).
 
 * Assumptions: It assumes a constant gravitational acceleration of $9.8 m/s^2$ and zero air resistance 
@@ -17,29 +17,35 @@ The app uses standard kinematic equations to process user input (Launch Velocity
 * Calculations: The app updates results in real-time as the user types into the input fields .
 
 ------------------------------
-2. Project SetupLocal Development (Desktop)
+# 2. Project SetupLocal Development (Desktop)
 
    1. Clone the repository:
    
-   git clone https://github.com
-   cd kenProjects
+   ``` bash
+    git clone https://github.com
+    cd kenProjects
+   ```
    
    2. Create a virtual environment:
    
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   
+   ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
    3. Install dependencies:
    
-   pip install -r requirements.txt
-   
+   ```bash 
+    pip install -r requirements.txt
+   ```
    (Note: Ensure your Python version matches the project requirement of 3.11) .
    4. Run the application:
    
-   python main.py
+   ```bash 
+    python main.py
+   ```
    
-   
-Android Build (CI/CD)
+# Android Build (CI/CD)
+
 The project includes a GitHub Actions workflow (apkBuild.yaml) that automatically builds an APK whenever you push to the main branch. It uses Buildozer inside an Ubuntu environment to compile the Python code into an Android-ready package .
 ------------------------------
 3. Dependencies & ReferencesApplication Dependencies
@@ -50,7 +56,7 @@ These are required to run the application, as specified in buildozer.spec :
 * Kivymd (1.2.0): A collection of Material Design compliant widgets for Kivy.
 * Filetype: Used for file handling/identification.
 
-Workflow Dependencies (GitHub Actions)
+# Workflow Dependencies (GitHub Actions)
 
 The .github/workflows/apkBuild.yaml file utilizes the following tools to automate the build 
 
