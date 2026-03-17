@@ -2,7 +2,7 @@
 
 ### Projectile Motion Calculator
 An Android  built with Python, Kivy, and Kivymd that calculates the physical properties of a projectile's motion  based on user input.
-1. About the Project
+# 1. About the Project
 This application provides a simple interface to calculate three key metrics of projectile motion:
 
 * Maximum Height: The highest vertical point reached by the projectile.
